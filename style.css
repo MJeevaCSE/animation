@@ -1,0 +1,204 @@
+body{
+    background-color: #fae4f2;
+}
+
+.main{
+     
+    width: 600px;
+    height: 800px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: h 5s linear infinite;
+}
+
+.head{
+     
+    width: 350px;
+    height: 250px;
+    border-radius: 200px 200px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: #eb1c9f;
+   
+}
+
+.eyes {
+  position: relative;
+  top: 0px;
+  display: flex;
+  justify-content:safe;
+  height: 50px;
+  width: 300px;
+  
+}
+
+.left-eye,
+.right-eye {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: white;
+  display: inline-block;
+
+}
+
+.left-eye {
+  margin-left: 30px;
+}
+
+.right-eye {
+  margin-left: 100px;
+}
+
+
+.body{
+     
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.left-arm, .right-arm, .main-body{
+     
+    background-color: #eb1d9f;
+}
+.left-arm, .right-arm{
+    animation: a 5s linear infinite;
+}
+
+.left-arm, .right-arm, .left-leg, .right-leg{
+    height: 220px;
+    width: 60px;
+    border-radius: 100px;
+    margin: 20px;
+     
+    background-color: #eb1d9f;
+}
+.left-leg{
+    
+     animation:ll 0.7s linear infinite;
+}
+.right-leg{
+    
+    animation:rl 0.7s linear infinite;
+}
+
+.main-body{
+    width: 350px;
+    border-radius: 0 0 100px 100px;
+    animation: h 5s linear infinite;
+
+}
+
+
+.body2{
+     
+    display: flex;
+    position: relative;
+    bottom: 120px;
+}
+
+.main:hover .head {
+    animation: movehead 2s infinite;
+  }
+  
+  .main:hover .main-body{
+    border-radius: 40%;
+    animation: movemain-body 2s infinite;
+  }
+  
+  .main:hover .left-arm {
+    animation: moveleft-arm 2s infinite;
+  }
+  
+  .main:hover .right-arm {
+    animation: moveright-arm 2s infinite;
+  }
+  
+  .main:hover .left-leg {
+    animation: moveleft-leg 2s infinite;
+  }
+  
+  .main:hover .right-leg {
+    animation: moveright-leg 2s infinite;
+  }
+  
+  @keyframes movehead {
+   0%{ width: 350px;}
+   25%{width: 400px;}
+   50%{ width: 350px;}
+   75%{width: 400px;}
+   100%{ width: 350px;}
+  }
+  
+  @keyframes moveleft-arm {
+    0% {transform: rotate(0deg);
+      transform-origin: top center;}
+    25% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+    }
+   50% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+    75% {
+      transform: rotate(90deg);
+      transform-origin: top center;
+    }
+  
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  }
+  
+  @keyframes moveright-arm {
+    0% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+    25% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+    }
+    50% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+    75% {
+      transform: rotate(-90deg);
+      transform-origin: top center;
+    }
+    100% {
+      transform: rotate(0deg);
+      transform-origin: top center;
+    }
+  }
+  @keyframes moveleft-leg {
+    0% { transform: rotate(0deg);}
+    25% {transform: rotate(20deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(20deg);}
+    100% {transform: rotate(0deg);}
+  }
+  
+  @keyframes moveright-leg {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(-20deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-20deg);}
+    100% {transform: rotate(0deg);}
+  }
+  
+  @keyframes movemain-body {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+  
